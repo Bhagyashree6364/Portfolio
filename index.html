@@ -26,7 +26,6 @@
       --accent: #7c5cff;
       --accent-2: #22d3ee;
       --accent-3: #29d391;
-      --danger: #ff6b81;
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       --radius-sm: 12px;
       --radius-md: 18px;
@@ -317,7 +316,8 @@
     .project-card,
     .cert-card,
     .contact-card,
-    .timeline-card {
+    .timeline-card,
+    .experience-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
@@ -503,7 +503,8 @@
 
     .skills-grid,
     .projects-grid,
-    .cert-grid {
+    .cert-grid,
+    .experience-grid {
       display: grid;
       gap: 20px;
     }
@@ -520,10 +521,15 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .experience-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .skill-card,
     .project-card,
     .cert-card,
-    .timeline-card {
+    .timeline-card,
+    .experience-card {
       padding: 24px;
       transition: var(--transition);
       position: relative;
@@ -533,7 +539,8 @@
     .skill-card:hover,
     .project-card:hover,
     .cert-card:hover,
-    .timeline-card:hover {
+    .timeline-card:hover,
+    .experience-card:hover {
       transform: translateY(-6px);
       border-color: rgba(124, 92, 255, 0.34);
     }
@@ -541,7 +548,8 @@
     .skill-card h3,
     .project-card h3,
     .cert-card h3,
-    .timeline-card h3 {
+    .timeline-card h3,
+    .experience-card h3 {
       font-size: 1.2rem;
       margin-bottom: 12px;
       letter-spacing: -0.02em;
@@ -550,8 +558,36 @@
     .skill-card p,
     .project-card p,
     .cert-card p,
-    .timeline-card p {
+    .timeline-card p,
+    .experience-card p {
       color: var(--muted);
+    }
+
+    .experience-meta {
+      color: var(--accent-2);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .experience-list {
+      color: var(--muted);
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    .experience-list li {
+      margin-bottom: 8px;
+    }
+
+    .external-link {
+      color: var(--accent-2);
+      font-weight: 700;
+      transition: var(--transition);
+    }
+
+    .external-link:hover {
+      text-decoration: underline;
     }
 
     .project-top,
@@ -618,8 +654,15 @@
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 22px;
+      margin-bottom: 10px;
       display: inline-block;
+    }
+
+    .contact-phone {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 18px;
     }
 
     .social-links,
@@ -656,7 +699,8 @@
       .cert-grid,
       .timeline-grid,
       .skills-grid,
-      .hero-highlights {
+      .hero-highlights,
+      .experience-grid {
         grid-template-columns: 1fr;
       }
 
@@ -695,7 +739,8 @@
       .skill-card,
       .project-card,
       .cert-card,
-      .timeline-card {
+      .timeline-card,
+      .experience-card {
         padding: 22px;
       }
 
@@ -715,9 +760,9 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Highlights</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -727,7 +772,7 @@
         </button>
 
         <a
-          href="assets/Bhagyashree_Backend_Developer_Fresher_Resume.pdf"
+          href="assets/Bhagyashree_Software_Engineer_Resume.pdf"
           class="resume-nav-btn"
           download
           target="_blank"
@@ -743,18 +788,20 @@
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="hero-badge">Open to Java Backend / Full Stack / Cloud / Software Roles</p>
+          <p class="hero-badge">Open to Software Developer · Backend · Full Stack Roles</p>
+
           <h1 class="hero-title">
             Bhagyashree <span class="gradient-text">Kerur</span>
           </h1>
+
           <p class="hero-subtitle">
-            Entry-level software developer with a backend-first mindset, building modern web applications using Java, Spring Boot, React, SQL, REST APIs, and cloud-oriented tools while exploring AI-assisted workflows and practical Edge AI solutions.
+            Software Developer with hands-on experience building and debugging backend and full-stack applications using Java, Spring Boot, REST APIs, SQL, Node.js, Express.js, and React. Currently contributing to production features at an AI-powered food-tech startup.
           </p>
 
           <div class="hero-actions">
             <a href="#projects" class="cta-btn primary-btn">View Projects</a>
             <a
-              href="assets/Bhagyashree_Backend_Developer_Fresher_Resume.pdf"
+              href="assets/Bhagyashree_Software_Engineer_Resume.pdf"
               class="cta-btn secondary-btn"
               download
               target="_blank"
@@ -774,8 +821,8 @@
               <span class="highlight-value">Backend, APIs, Full Stack, Cloud</span>
             </div>
             <div class="highlight-item">
-              <span class="highlight-label">Interests</span>
-              <span class="highlight-value">AI Tools, Edge AI, Azure, Problem Solving</span>
+              <span class="highlight-label">Currently</span>
+              <span class="highlight-value">Intern Developer · Amealio</span>
             </div>
           </div>
         </div>
@@ -784,15 +831,15 @@
           <p class="mini-label">Featured Project</p>
           <h2>SalesSavvy</h2>
           <p>
-            Backend-driven e-commerce platform with modular architecture, JWT-based authentication, REST APIs, user and order workflows, payment integration, and scalable full stack design.
+            Full-stack e-commerce platform built with Java, Spring Boot, React, and MySQL, featuring REST APIs, Spring Security, JWT authentication, and role-based access control.
           </p>
           <div class="hero-tags">
             <span>Java</span>
             <span>Spring Boot</span>
             <span>React</span>
+            <span>Spring Security</span>
             <span>JWT</span>
             <span>MySQL</span>
-            <span>Razorpay</span>
           </div>
           <a
             href="https://github.com/Bhagyashree6364/SalesSavvyBackend.git"
@@ -810,9 +857,9 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">About</p>
-          <h2>I build reliable software with strong backend logic and clean modern UX.</h2>
+          <h2>I build reliable backend systems and modern full-stack applications.</h2>
           <p>
-            Fresher software developer profile aligned for Java backend, software development, and full stack roles.
+            Software developer focused on backend and full-stack engineering, with production exposure, strong fundamentals, and practical project experience.
           </p>
         </div>
 
@@ -821,34 +868,34 @@
             <div class="about-image">
               <img src="Professional_Pic.jpeg" alt="Bhagyashree Kerur portrait" />
             </div>
-            <div class="edu-badge">2025 Graduate · Gold Medalist</div>
+            <div class="edu-badge">BE Graduate · Gold Medalist</div>
           </div>
 
           <div class="about-box reveal">
             <p>
-              I’m a fresher software developer with hands-on experience building full stack applications, backend systems, REST APIs, database-integrated solutions, and project-based products across e-commerce, learning platforms, IoT, and Edge AI domains.
+              I am a software developer with hands-on experience across Java, Spring Boot, REST APIs, SQL, Node.js, Express.js, React, and MongoDB. I currently contribute to production features at <a href="https://amealio.com/" target="_blank" rel="noopener noreferrer" class="external-link">Amealio</a>, working with senior engineers on feature development, debugging, API validation, and release workflows.
             </p>
             <p>
-              My work combines Java and Spring Boot development, frontend implementation with React, database design, debugging, deployment basics, and practical software engineering workflows. I’m also strengthening my profile in cloud fundamentals, AI-assisted development, and production-ready engineering practices relevant to today’s job market.
+              My foundation includes OOP, DSA, Git, CI/CD, Agile development, authentication, and database-backed application workflows. I am particularly interested in backend engineering, scalable APIs, cloud-enabled applications, and practical AI-assisted development.
             </p>
 
             <div class="about-points">
               <div class="about-pill">Backend Engineering</div>
               <div class="about-pill">Full Stack Development</div>
-              <div class="about-pill">REST API Development</div>
-              <div class="about-pill">Database Design</div>
+              <div class="about-pill">REST APIs</div>
+              <div class="about-pill">Authentication</div>
+              <div class="about-pill">CI/CD</div>
               <div class="about-pill">Cloud Learning</div>
-              <div class="about-pill">AI Tool Usage</div>
             </div>
 
             <div class="stats-row">
               <div class="stat-card">
-                <strong>6+</strong>
-                <span>Projects Built</span>
+                <strong>9.72</strong>
+                <span>BE CGPA</span>
               </div>
               <div class="stat-card">
-                <strong>3</strong>
-                <span>Core Focus Areas</span>
+                <strong>2</strong>
+                <span>Internships</span>
               </div>
               <div class="stat-card">
                 <strong>2025</strong>
@@ -863,130 +910,82 @@
     <section id="skills" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="section-kicker">Skills</p>
-          <h2>Backend-first, full-stack capable, and cloud-aware for modern software roles.</h2>
+          <p class="section-kicker">Technical Skills</p>
+          <h2>Backend-first, full-stack capable, and production-aware.</h2>
           <p>
-            Built to reflect the technologies, tools, and workflows recruiters actively scan for in fresher backend and software developer profiles.
+            Skills aligned with backend, software development, and full-stack engineering roles.
           </p>
         </div>
 
         <div class="skills-grid">
           <article class="skill-card reveal">
-            <h3>Programming</h3>
-            <p>Java, Python, JavaScript, SQL, C, C++</p>
+            <h3>Languages</h3>
+            <p>Java, Python, JavaScript, SQL</p>
           </article>
 
           <article class="skill-card reveal">
-            <h3>Java Backend</h3>
-            <p>Core Java, OOP, Collections, Exception Handling, JDBC, J2EE, Servlets, JSP</p>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Frameworks</h3>
-            <p>Spring Boot, Spring MVC, Spring Core, Hibernate, JPA, REST APIs, Node.js, Express.js, Django</p>
+            <h3>Backend</h3>
+            <p>Spring Boot, Node.js, Express.js, Django, REST APIs, Spring Security, JWT</p>
           </article>
 
           <article class="skill-card reveal">
             <h3>Frontend</h3>
-            <p>HTML5, CSS3, JavaScript ES6, React, Responsive Design, Component-Based UI</p>
+            <p>React, Vite.js, HTML5, CSS3, Responsive UI</p>
           </article>
 
           <article class="skill-card reveal">
             <h3>Databases</h3>
-            <p>MySQL, PostgreSQL, MongoDB, Oracle, Neon</p>
+            <p>MySQL, MongoDB</p>
           </article>
 
           <article class="skill-card reveal">
-            <h3>Developer Tools</h3>
-            <p>Git, GitHub, Postman, Maven, VS Code, Eclipse, STS, MySQL Workbench</p>
+            <h3>Tools</h3>
+            <p>Git, GitHub, GitHub Actions, Jenkins, Docker, Postman, Linux</p>
           </article>
 
           <article class="skill-card reveal">
-            <h3>Cloud & Deployment</h3>
-            <p>Cloud Computing Fundamentals, Microsoft Azure Fundamentals, Deployment Basics, Render, Vercel, CI/CD Awareness</p>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>AI & Productivity</h3>
-            <p>AI-Assisted Development, Prompt Engineering Basics, Generative AI Tools, Debugging Workflows, Documentation Support, AI Integration Awareness</p>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Edge AI / IoT</h3>
-            <p>Edge AI Concepts, Vehicle Detection Pipelines, Real-Time Analysis, Computer Vision Exposure, IoT + AI Integration</p>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Professional Strengths</h3>
-            <p>Problem Solving, Debugging, Team Collaboration, Communication, Learning Agility, Analytical Thinking</p>
+            <h3>Concepts</h3>
+            <p>OOP, DSA, API Development, Authentication, Agile, CI/CD</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="certifications" class="section">
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="section-kicker">Certifications</p>
-          <h2>Focused learning across full stack development, backend engineering, cloud, and applied AI.</h2>
-          <p>
-            Stronger portfolio credibility comes from pairing projects with verified training and certification signals.
-          </p>
+          <p class="section-kicker">Experience</p>
+          <h2>Hands-on experience in production and structured development environments.</h2>
         </div>
 
-        <div class="cert-grid">
-          <article class="cert-card reveal">
-  <div class="cert-top">
-    <span class="cert-year">2026</span>
-  </div>
-  <h3>Microsoft Azure AI Essentials Professional Certificate</h3>
-  <p>Microsoft × LinkedIn Learning</p>
-  <p>
-    Professional certification covering Azure AI fundamentals, Azure AI Studio, generative AI concepts, and practical AI skills for modern software workflows.
-  </p>
-  <div class="cert-tags">
-    <span>Azure AI</span>
-    <span>Azure AI Studio</span>
-    <span>Generative AI</span>
-    <span>Machine Learning</span>
-  </div>
-</article>
-
-          <article class="cert-card reveal">
-            <div class="cert-top">
-              <span class="cert-year">2025</span>
-            </div>
-            <h3>Full Stack Development Certificate</h3>
-            <p>KodNest Technologies</p>
-            <p>
-              Focused on Java, Spring Boot, REST APIs, SQL, backend workflows, and full stack application development.
-            </p>
-            <div class="cert-tags">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>REST APIs</span>
-              <span>SQL</span>
-            </div>
+        <div class="experience-grid">
+          <article class="experience-card reveal">
+            <p class="experience-meta">Jun 2026 – Present · Pune, Maharashtra</p>
+            <h3>
+              Intern Developer ·
+              <a href="https://amealio.com/" target="_blank" rel="noopener noreferrer" class="external-link">Amealio</a>
+            </h3>
+            <ul class="experience-list">
+              <li>Contribute to full-stack development of an AI-powered food-tech platform, working with senior engineers on production features and application workflows.</li>
+              <li>Develop and test features using React, Node.js, Express.js, and MongoDB across user-facing and backend modules.</li>
+              <li>Debug application issues, analyze logs, monitor APIs, validate features, and assist with release activities to improve reliability.</li>
+              <li>Work with service integrations and cloud deployment workflows while gaining end-to-end product development exposure.</li>
+            </ul>
           </article>
 
-          <article class="cert-card reveal">
-            <div class="cert-top">
-              <span class="cert-year">2024</span>
-            </div>
-            <h3>Intel Unnati Industrial Training</h3>
-            <p>Edge AI / IoT Distributed Systems</p>
-            <p>
-              Practical exposure to Edge AI, IoT concepts, real-time analysis, and implementation through vehicle movement analysis.
-            </p>
-            <div class="cert-tags">
-              <span>Edge AI</span>
-              <span>IoT</span>
-              <span>Python</span>
-              <span>Analytics</span>
-            </div>
+          <article class="experience-card reveal">
+            <p class="experience-meta">Mar 2025 – Jun 2025 · Bengaluru, Karnataka</p>
+            <h3>
+              Software Development Intern ·
+              <a href="https://kodnest.com/" target="_blank" rel="noopener noreferrer" class="external-link">KodNest Technologies</a>
+            </h3>
+            <ul class="experience-list">
+              <li>Built and tested REST APIs using Java, Spring Boot, and MySQL following layered architecture and clean coding practices.</li>
+              <li>Implemented backend functionality and database operations using object-oriented programming principles.</li>
+              <li>Used Git for version control and collaborated in Agile development cycles.</li>
+              <li>Tested APIs using Postman and debugged issues to improve correctness and reliability.</li>
+            </ul>
           </article>
-
-      
         </div>
       </div>
     </section>
@@ -995,10 +994,7 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Projects</p>
-          <h2>Selected work that reflects backend depth, full stack building, and experimentation.</h2>
-          <p>
-            These projects are positioned to show architecture, APIs, databases, authentication, payments, and applied engineering value.
-          </p>
+          <h2>Selected projects demonstrating backend depth, full-stack capability, and applied engineering.</h2>
         </div>
 
         <div class="projects-grid">
@@ -1007,18 +1003,17 @@
               <span class="project-number">01</span>
               <span class="project-type">Full Stack</span>
             </div>
-            <h3>SalesSavvy - Modular E-Commerce Platform</h3>
+            <h3>SalesSavvy · Full-Stack E-Commerce Platform</h3>
             <p>
-              Built a scalable modular e-commerce application with independent services for authentication, user management, product flow, cart, orders, and payments using backend-driven architecture and secure workflows.
+              Developed a full-stack e-commerce application using Java, Spring Boot, React, and MySQL. Implemented REST APIs for authentication, product catalog, cart operations, and order processing. Secured backend services using Spring Security, JWT authentication, and role-based access control.
             </p>
             <div class="tech-tags">
               <span>Java</span>
               <span>Spring Boot</span>
-              <span>REST APIs</span>
-              <span>JWT</span>
               <span>React</span>
               <span>MySQL</span>
-              <span>Razorpay</span>
+              <span>Spring Security</span>
+              <span>JWT</span>
             </div>
             <div class="project-links">
               <a href="https://github.com/Bhagyashree6364/SalesSavvyBackend.git" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -1028,19 +1023,20 @@
           <article class="project-card reveal">
             <div class="project-top">
               <span class="project-number">02</span>
-              <span class="project-type">Frontend</span>
+              <span class="project-type">Full Stack</span>
             </div>
-            <h3>TaskBuddy</h3>
+            <h3>SkillSwap · Full-Stack Web Platform</h3>
             <p>
-              Lightweight task management application with modular React components, smooth interaction design, and progress-focused user workflows.
+              Built a full-stack web application using Node.js, Express.js, React, and MongoDB. Developed REST APIs for authentication, user management, and application workflows, with modular CRUD-based backend operations.
             </p>
             <div class="tech-tags">
+              <span>Node.js</span>
+              <span>Express.js</span>
               <span>React</span>
-              <span>JavaScript</span>
-              <span>CSS3</span>
+              <span>MongoDB</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Bhagyashree6364/TaskBuddy.git" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://skillswap-frontend-9nw8tk4qn-bhagyashree-kerurs-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
             </div>
           </article>
 
@@ -1049,15 +1045,15 @@
               <span class="project-number">03</span>
               <span class="project-type">Full Stack</span>
             </div>
-            <h3>MealMate</h3>
+            <h3>MealMate · Meal Planning Application</h3>
             <p>
-              Food ordering platform featuring restaurant discovery, order workflows, user flow handling, and secure payment integration with full stack implementation.
+              Developed a full-stack meal planning application using Python, Django, React, and Vite.js. Implemented backend application logic, API communication, and modular frontend components for maintainable workflows.
             </p>
             <div class="tech-tags">
+              <span>Python</span>
               <span>Django</span>
               <span>React</span>
-              <span>MySQL</span>
-              <span>Razorpay</span>
+              <span>Vite.js</span>
             </div>
             <div class="project-links">
               <a href="https://github.com/Bhagyashree6364/MealMate" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -1067,19 +1063,20 @@
           <article class="project-card reveal">
             <div class="project-top">
               <span class="project-number">04</span>
-              <span class="project-type">Collaboration</span>
+              <span class="project-type">Edge AI</span>
             </div>
-            <h3>SkillSwap</h3>
+            <h3>Vehicle Movement Analysis · Intel Unnati</h3>
             <p>
-              Peer learning platform designed for skill exchange, collaboration, and interactive communication in a practical learning environment.
+              Developed an Edge AI-based vehicle movement analysis project using Python and SQL for data processing and analytical workflows. Applied computer vision and edge-based analysis techniques to detect and evaluate vehicle movement patterns.
             </p>
             <div class="tech-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Computer Vision</span>
+              <span>Edge AI</span>
             </div>
             <div class="project-links">
-              <a href="https://skillswap-frontend-9nw8tk4qn-bhagyashree-kerurs-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/Bhagyashree6364/Vehicle-Movement-Analysis-using-Edge---AI.git" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </article>
 
@@ -1101,69 +1098,120 @@
               <a href="https://github.com/Bhagyashree6364/RFID-Based-Doorlock-Access-Control-System" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-number">06</span>
-              <span class="project-type">AI / Edge AI</span>
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Certifications</p>
+          <h2>Continuous learning across backend, cloud, DevOps, and applied AI.</h2>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <span class="cert-year">2026</span>
             </div>
-            <h3>Vehicle Movement Analysis</h3>
-            <p>
-              Edge AI project using Python and analytics workflows for real-time vehicle detection, movement tracking, counting, traffic insight generation, and practical AI + IoT exposure.
-            </p>
-            <div class="tech-tags">
-              <span>Python</span>
+            <h3>
+              <a href="https://lnkd.in/p/gcrjx8dw" target="_blank" rel="noopener noreferrer" class="external-link">
+                Microsoft Azure AI Essentials Professional Certificate
+              </a>
+            </h3>
+            <p>Microsoft × LinkedIn Learning</p>
+            <div class="cert-tags">
+              <span>Azure AI</span>
+              <span>Generative AI</span>
+              <span>Machine Learning</span>
+            </div>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <span class="cert-year">2026</span>
+            </div>
+            <h3>
+              <a href="https://lnkd.in/p/gm73bnSh" target="_blank" rel="noopener noreferrer" class="external-link">
+                DevOps Professional Certificate
+              </a>
+            </h3>
+            <p>PagerDuty × LinkedIn Learning</p>
+            <div class="cert-tags">
+              <span>CI/CD</span>
+              <span>DevOps</span>
+              <span>Reliability</span>
+            </div>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <span class="cert-year">2025</span>
+            </div>
+            <h3>
+              <a href="https://lnkd.in/p/gv5bjAjW" target="_blank" rel="noopener noreferrer" class="external-link">
+                Full Stack Development Certificate
+              </a>
+            </h3>
+            <p>KodNest Technologies</p>
+            <div class="cert-tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>REST APIs</span>
               <span>SQL</span>
-              <span>Edge AI</span>
-              <span>Computer Vision</span>
-              <span>REST Endpoints</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Bhagyashree6364/Vehicle-Movement-Analysis-using-Edge---AI.git" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <span class="cert-year">2024</span>
+            </div>
+            <h3>
+              <a href="https://lnkd.in/p/gDZwRxYb" target="_blank" rel="noopener noreferrer" class="external-link">
+                Intel UNNATI Industrial Training Program
+              </a>
+            </h3>
+            <p>Intel Corporation · Edge AI / IoT Distributed Systems</p>
+            <div class="cert-tags">
+              <span>Edge AI</span>
+              <span>IoT</span>
+              <span>Python</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="education" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="section-kicker">Highlights</p>
-          <h2>Quick signals that strengthen recruiter trust and shortlist value.</h2>
-          
+          <p class="section-kicker">Education</p>
+          <h2>Strong academic foundation in engineering and software development.</h2>
         </div>
 
         <div class="timeline-grid">
           <article class="timeline-card reveal">
-            <div class="timeline-meta">Education</div>
-            <h3>BE in Electronics & Communication Engineering</h3>
+            <div class="timeline-meta">2021 – 2025</div>
+            <h3>Bachelor of Engineering · Electronics & Communication</h3>
             <p>
-              2025 graduate with strong project-based technical foundation and consistent focus on software development, backend systems, and applied engineering.
+              Sharnbasva University, Kalaburagi · CGPA: 9.72/10
             </p>
           </article>
 
           <article class="timeline-card reveal">
             <div class="timeline-meta">Achievement</div>
-            <h3>Department Topper / Gold Medalist</h3>
+            <h3>
+              <a
+                href="https://www.linkedin.com/posts/bhagya31_goldmedalist-departmenttopper-ece-activity-7406403395621801985-n0Jx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEHJ7JcBYPgkeT-jQb77-wEZ35TK2d8W1zM"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="external-link"
+              >
+                Department Topper · Gold Medalist
+              </a>
+            </h3>
             <p>
-              Academic distinction that reflects consistency, discipline, and strong learning ability across engineering fundamentals.
-            </p>
-          </article>
-
-          <article class="timeline-card reveal">
-            <div class="timeline-meta">Role Readiness</div>
-            <h3>Backend / Software / Full Stack Aligned</h3>
-            <p>
-              Portfolio, projects, and certifications are intentionally positioned for junior Java developer, backend developer, and software developer opportunities.
-            </p>
-          </article>
-
-          <article class="timeline-card reveal">
-            <div class="timeline-meta">Current Direction</div>
-            <h3>Cloud + AI-Aware Developer Growth</h3>
-            <p>
-              Expanding into Azure fundamentals, AI-assisted development workflows, and modern engineering practices that strengthen 2026 job-market relevance.
+              Recognized for consistent academic performance and strong engineering fundamentals.
             </p>
           </article>
         </div>
@@ -1174,27 +1222,24 @@
       <div class="container contact-wrapper">
         <div class="section-heading reveal" style="text-align: center; margin-inline: auto;">
           <p class="section-kicker">Contact</p>
-          <h2>Let’s connect for software roles, internships, and meaningful projects.</h2>
+          <h2>Let’s connect for software, backend, and full-stack opportunities.</h2>
           <p>
-            Open to backend, Java, software development, full stack, and cloud-oriented opportunities.
+            Open to software developer, backend developer, Java developer, and full-stack roles.
           </p>
         </div>
 
         <div class="contact-card reveal">
           <a class="contact-email" href="mailto:bhagyakerur31@gmail.com">bhagyakerur31@gmail.com</a>
-          <p>
-            I’m actively seeking opportunities where I can contribute to backend development, full stack engineering, API-driven applications, and practical cloud-enabled software products.
-          </p>
+          <span class="contact-phone">+91 6364346034 · Pune, Maharashtra, India</span>
 
           <div class="social-links">
             <a href="https://github.com/Bhagyashree6364" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub</a>
             <a href="https://www.linkedin.com/in/bhagya31/" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn</a>
-            <a href="https://www.instagram.com/bhagya_s_kerur/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram</a>
           </div>
 
           <div class="contact-actions">
             <a
-              href="assets/Bhagyashree_Backend_Developer_Fresher_Resume.pdf"
+              href="assets/Bhagyashree_Software_Engineer_Resume.pdf"
               class="cta-btn primary-btn"
               download
               target="_blank"
