@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bhagyashree Kerur — software developer building Java backend systems and full-stack applications. Explore projects, experience, and technical skills." />
   <title>Bhagyashree Kerur | Software Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,748 +13,12 @@
     rel="stylesheet"
   />
 
-  <style>
-    :root {
-      --bg: #0a0f1f;
-      --bg-soft: #10182d;
-      --bg-card: rgba(16, 24, 45, 0.72);
-      --surface: rgba(255, 255, 255, 0.05);
-      --surface-2: rgba(255, 255, 255, 0.08);
-      --border: rgba(255, 255, 255, 0.1);
-      --text: #f5f7ff;
-      --muted: #aab4d6;
-      --faint: #7d88ad;
-      --accent: #7c5cff;
-      --accent-2: #22d3ee;
-      --accent-3: #29d391;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --radius-sm: 12px;
-      --radius-md: 18px;
-      --radius-lg: 26px;
-      --max-width: 1200px;
-      --font-body: "General Sans", sans-serif;
-      --font-display: "Clash Display", sans-serif;
-      --transition: all 0.3s ease;
-    }
-
-    [data-theme="light"] {
-      --bg: #f5f7ff;
-      --bg-soft: #eef2ff;
-      --bg-card: rgba(255, 255, 255, 0.76);
-      --surface: rgba(17, 24, 39, 0.04);
-      --surface-2: rgba(17, 24, 39, 0.08);
-      --border: rgba(17, 24, 39, 0.08);
-      --text: #121826;
-      --muted: #49536f;
-      --faint: #6f7b98;
-      --shadow: 0 18px 45px rgba(57, 76, 120, 0.15);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background:
-        radial-gradient(circle at top right, rgba(124, 92, 255, 0.18), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.14), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-    }
-
-    .skip-link:focus {
-      left: 16px;
-      top: 16px;
-      background: var(--accent);
-      color: white;
-      padding: 10px 14px;
-      border-radius: 10px;
-      z-index: 1000;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      background: rgba(10, 15, 31, 0.72);
-      border-bottom: 1px solid var(--border);
-    }
-
-    [data-theme="light"] .navbar {
-      background: rgba(245, 247, 255, 0.8);
-    }
-
-    .nav-inner {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #fff;
-      box-shadow: var(--shadow);
-      flex-shrink: 0;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 26px;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .theme-toggle,
-    .resume-nav-btn,
-    .social-btn,
-    .inline-btn {
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text);
-      border-radius: 999px;
-      transition: var(--transition);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    .theme-toggle {
-      width: 44px;
-      cursor: pointer;
-    }
-
-    .resume-nav-btn,
-    .social-btn,
-    .inline-btn {
-      padding: 0 18px;
-      font-weight: 600;
-    }
-
-    .resume-nav-btn:hover,
-    .social-btn:hover,
-    .inline-btn:hover,
-    .theme-toggle:hover {
-      transform: translateY(-2px);
-      border-color: rgba(124, 92, 255, 0.35);
-      box-shadow: 0 12px 30px rgba(124, 92, 255, 0.16);
-    }
-
-    .hero {
-      position: relative;
-      padding: 90px 0 80px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.85fr;
-      gap: 38px;
-      align-items: center;
-    }
-
-    .hero-badge,
-    .section-kicker,
-    .project-type,
-    .cert-year,
-    .edu-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(124, 92, 255, 0.12);
-      border: 1px solid rgba(124, 92, 255, 0.24);
-      color: #ddd6ff;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 18px;
-    }
-
-    [data-theme="light"] .hero-badge,
-    [data-theme="light"] .section-kicker,
-    [data-theme="light"] .project-type,
-    [data-theme="light"] .cert-year,
-    [data-theme="light"] .edu-badge {
-      color: #5b43d6;
-      background: rgba(124, 92, 255, 0.08);
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 7vw, 5.7rem);
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-      margin-bottom: 18px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-subtitle {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 62ch;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .cta-btn {
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      transition: var(--transition);
-      border: 1px solid transparent;
-    }
-
-    .primary-btn {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #fff;
-      box-shadow: 0 16px 40px rgba(124, 92, 255, 0.25);
-    }
-
-    .secondary-btn {
-      background: var(--surface);
-      color: var(--text);
-      border-color: var(--border);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .hero-highlights {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .highlight-item,
-    .hero-card,
-    .about-box,
-    .skill-card,
-    .project-card,
-    .cert-card,
-    .contact-card,
-    .timeline-card,
-    .experience-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .highlight-item {
-      padding: 18px;
-    }
-
-    .highlight-label {
-      display: block;
-      font-size: 0.82rem;
-      color: var(--faint);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .highlight-value {
-      font-weight: 600;
-      font-size: 0.98rem;
-    }
-
-    .hero-card {
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before,
-    .project-card.featured::before,
-    .cert-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(124, 92, 255, 0.12), rgba(34, 211, 238, 0.08));
-      opacity: 1;
-      pointer-events: none;
-    }
-
-    .hero-card > *,
-    .project-card > *,
-    .cert-card > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .mini-label {
-      color: var(--accent-2);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.82rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .hero-card h2 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      margin-bottom: 12px;
-      letter-spacing: -0.03em;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .hero-tags,
-    .tech-tags,
-    .about-points,
-    .cert-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .hero-tags span,
-    .tech-tags span,
-    .about-pill,
-    .cert-tags span {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    .inline-link {
-      display: inline-flex;
-      margin-top: 20px;
-      color: var(--accent-2);
-      font-weight: 700;
-    }
-
-    .section-heading {
-      margin-bottom: 40px;
-      max-width: 760px;
-    }
-
-    .section-heading h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p:last-child {
-      color: var(--muted);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .about-image-wrap {
-      position: relative;
-    }
-
-    .about-image {
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .about-image img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-    }
-
-    .edu-badge {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      margin-bottom: 0;
-    }
-
-    .about-box {
-      padding: 28px;
-    }
-
-    .about-box p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.4rem;
-      font-family: var(--font-display);
-      margin-bottom: 4px;
-    }
-
-    .stat-card span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .skills-grid,
-    .projects-grid,
-    .cert-grid,
-    .experience-grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cert-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .experience-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .skill-card,
-    .project-card,
-    .cert-card,
-    .timeline-card,
-    .experience-card {
-      padding: 24px;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-card:hover,
-    .project-card:hover,
-    .cert-card:hover,
-    .timeline-card:hover,
-    .experience-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(124, 92, 255, 0.34);
-    }
-
-    .skill-card h3,
-    .project-card h3,
-    .cert-card h3,
-    .timeline-card h3,
-    .experience-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .skill-card p,
-    .project-card p,
-    .cert-card p,
-    .timeline-card p,
-    .experience-card p {
-      color: var(--muted);
-    }
-
-    .experience-meta {
-      color: var(--accent-2);
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-    }
-
-    .experience-list {
-      color: var(--muted);
-      padding-left: 18px;
-      margin-top: 10px;
-    }
-
-    .experience-list li {
-      margin-bottom: 8px;
-    }
-
-    .external-link {
-      color: var(--accent-2);
-      font-weight: 700;
-      transition: var(--transition);
-    }
-
-    .external-link:hover {
-      text-decoration: underline;
-    }
-
-    .project-top,
-    .cert-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      align-items: center;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-
-    .project-number {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--accent-2);
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .project-links a {
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .project-card.featured {
-      grid-column: span 2;
-    }
-
-    .timeline-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .timeline-meta {
-      color: var(--accent-2);
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .contact-wrapper {
-      max-width: 880px;
-      margin: 0 auto;
-    }
-
-    .contact-card {
-      padding: 34px;
-      text-align: center;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .contact-email {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 10px;
-      display: inline-block;
-    }
-
-    .contact-phone {
-      display: block;
-      color: var(--muted);
-      font-weight: 600;
-      margin-bottom: 18px;
-    }
-
-    .social-links,
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 18px;
-    }
-
-    footer {
-      padding: 28px 0 46px;
-      text-align: center;
-      color: var(--faint);
-      font-size: 0.95rem;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.7s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1024px) {
-      .hero-grid,
-      .about-grid,
-      .projects-grid,
-      .cert-grid,
-      .timeline-grid,
-      .skills-grid,
-      .hero-highlights,
-      .experience-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card.featured {
-        grid-column: span 1;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        padding: 80px 0;
-      }
-
-      .nav-inner {
-        flex-direction: column;
-        padding: 14px 0;
-      }
-
-      .nav-links,
-      .nav-actions,
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .hero {
-        padding-top: 60px;
-      }
-
-      .hero-title {
-        font-size: clamp(2.5rem, 12vw, 4rem);
-      }
-
-      .about-box,
-      .hero-card,
-      .contact-card,
-      .skill-card,
-      .project-card,
-      .cert-card,
-      .timeline-card,
-      .experience-card {
-        padding: 22px;
-      }
-
-      .stats-row {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="#home" class="logo" aria-label="Bhagyashree Kerur home">BK</a>
 
@@ -788,18 +53,19 @@
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="hero-badge">Open to Software Developer · Backend · Full Stack Roles</p>
+          <p class="hero-badge">Trainee Developer · AccelTree Software Pvt. Ltd</p>
 
+          <p class="hero-eyebrow">Software developer / Pune, India</p>
           <h1 class="hero-title">
             Bhagyashree <span class="gradient-text">Kerur</span>
           </h1>
 
           <p class="hero-subtitle">
-            Software Developer with hands-on experience building and debugging backend and full-stack applications using Java, Spring Boot, REST APIs, SQL, Node.js, Express.js, and React. Currently contributing to production features at an AI-powered food-tech startup.
+            Software developer with experience in backend and full-stack applications using Java, Spring Boot, JavaScript, React, Node.js, and SQL. My work spans application development, testing, and delivery across development, UAT, and production environments. Currently a Trainee Developer at AccelTree Software Pvt. Ltd.
           </p>
 
           <div class="hero-actions">
-            <a href="#projects" class="cta-btn primary-btn">View Projects</a>
+            <a href="#projects" class="cta-btn primary-btn">Explore my work <span aria-hidden="true">↗</span></a>
             <a
               href="assets/Bhagyashree_Software_Engineer_Resume.pdf"
               class="cta-btn secondary-btn"
@@ -814,21 +80,29 @@
           <div class="hero-highlights">
             <div class="highlight-item">
               <span class="highlight-label">Primary Stack</span>
-              <span class="highlight-value">Java, Spring Boot, React, SQL</span>
+              <span class="highlight-value">Java, Spring Boot, JavaScript</span>
             </div>
             <div class="highlight-item">
               <span class="highlight-label">Focus</span>
-              <span class="highlight-value">Backend, APIs, Full Stack, Cloud</span>
+              <span class="highlight-value">Backend, Full Stack, REST APIs</span>
             </div>
             <div class="highlight-item">
               <span class="highlight-label">Currently</span>
-              <span class="highlight-value">Intern Developer · Amealio</span>
+              <span class="highlight-value">Trainee Developer · AccelTree Software Pvt. Ltd</span>
             </div>
           </div>
         </div>
 
         <div class="hero-card reveal">
-          <p class="mini-label">Featured Project</p>
+          <div class="project-visual" aria-hidden="true">
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="visual-core">S<span>SalesSavvy</span></div>
+            <span class="visual-node node-api">REST API</span>
+            <span class="visual-node node-auth">JWT / Security</span>
+            <span class="visual-node node-data">MySQL</span>
+          </div>
+          <p class="mini-label">Featured Project / 01</p>
           <h2>SalesSavvy</h2>
           <p>
             Full-stack e-commerce platform built with Java, Spring Boot, React, and MySQL, featuring REST APIs, Spring Security, JWT authentication, and role-based access control.
@@ -859,7 +133,7 @@
           <p class="section-kicker">About</p>
           <h2>I build reliable backend systems and modern full-stack applications.</h2>
           <p>
-            Software developer focused on backend and full-stack engineering, with production exposure, strong fundamentals, and practical project experience.
+            Software developer with backend and full-stack experience, combining application development, testing, and delivery across technologies and business domains.
           </p>
         </div>
 
@@ -873,10 +147,10 @@
 
           <div class="about-box reveal">
             <p>
-              I am a software developer with hands-on experience across Java, Spring Boot, REST APIs, SQL, Node.js, Express.js, React, and MongoDB. I currently contribute to production features at <a href="https://amealio.com/" target="_blank" rel="noopener noreferrer" class="external-link">Amealio</a>, working with senior engineers on feature development, debugging, API validation, and release workflows.
+              I am a software developer with experience building backend and full-stack applications using Java, Spring Boot, JavaScript, SQL, React, Node.js, Express.js, and MongoDB. My skills span REST APIs, authentication, database-backed workflows, testing, and application delivery, with an adaptable approach to different technologies and business domains.
             </p>
             <p>
-              My foundation includes OOP, DSA, Git, CI/CD, Agile development, authentication, and database-backed application workflows. I am particularly interested in backend engineering, scalable APIs, cloud-enabled applications, and practical AI-assisted development.
+              I currently work as a Trainee Developer at <a href="https://www.linkedin.com/company/acceltree-software/" target="_blank" rel="noopener noreferrer" class="external-link">AccelTree Software Pvt. Ltd</a>, contributing to BFSI applications using Java, Spring Boot, and JavaScript. My responsibilities include development, testing, code merging, and Jenkins-based delivery workflows across development, user acceptance testing (UAT), and production environments. Previous internships and projects add full-stack development and cybersecurity experience to my foundation in OOP, data structures, Git, CI/CD, and Agile development.
             </p>
 
             <div class="about-points">
@@ -885,7 +159,7 @@
               <div class="about-pill">REST APIs</div>
               <div class="about-pill">Authentication</div>
               <div class="about-pill">CI/CD</div>
-              <div class="about-pill">Cloud Learning</div>
+              <div class="about-pill">Development, UAT &amp; Production</div>
             </div>
 
             <div class="stats-row">
@@ -894,7 +168,7 @@
                 <span>BE CGPA</span>
               </div>
               <div class="stat-card">
-                <strong>2</strong>
+                <strong>3</strong>
                 <span>Internships</span>
               </div>
               <div class="stat-card">
@@ -911,9 +185,9 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Technical Skills</p>
-          <h2>Backend-first, full-stack capable, and production-aware.</h2>
+          <h2>Java backend development and full-stack engineering.</h2>
           <p>
-            Skills aligned with backend, software development, and full-stack engineering roles.
+            Current professional stack: Java, Spring Boot, and JavaScript. Additional technologies used across previous internships and projects are listed below.
           </p>
         </div>
 
@@ -945,7 +219,7 @@
 
           <article class="skill-card reveal">
             <h3>Concepts</h3>
-            <p>OOP, DSA, API Development, Authentication, Agile, CI/CD</p>
+            <p>OOP, DSA, API Development, Authentication, Agile, CI/CD, Application Testing, Code Merging, Development / UAT / Production Workflows</p>
           </article>
         </div>
       </div>
@@ -955,21 +229,38 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Experience</p>
-          <h2>Hands-on experience in production and structured development environments.</h2>
+          <h2>Professional experience in software development and delivery.</h2>
         </div>
 
         <div class="experience-grid">
           <article class="experience-card reveal">
-            <p class="experience-meta">Jun 2026 – Present · Pune, Maharashtra</p>
+            <p class="experience-meta">Oct 2025 – Present · Pune, Maharashtra</p>
+            <h3>
+              Trainee Developer ·
+              <a href="https://www.linkedin.com/company/acceltree-software/" target="_blank" rel="noopener noreferrer" class="external-link">AccelTree Software Pvt. Ltd</a>
+            </h3>
+            <p>
+              Technology company serving the banking, financial services, and insurance (BFSI) sector.
+            </p>
+            <ul class="experience-list">
+              <li>Contribute to BFSI application development using Java, Spring Boot, and JavaScript.</li>
+              <li>Work across development, user acceptance testing (UAT), and production environments as part of the application delivery lifecycle.</li>
+              <li>Test application changes and validate functionality across environments.</li>
+              <li>Merge code changes and work with Jenkins-based build and delivery workflows.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card reveal">
+            <p class="experience-meta">Jun 2025 – Oct 2025 · Pune, Maharashtra</p>
             <h3>
               Intern Developer ·
               <a href="https://amealio.com/" target="_blank" rel="noopener noreferrer" class="external-link">Amealio</a>
             </h3>
             <ul class="experience-list">
-              <li>Contribute to full-stack development of an AI-powered food-tech platform, working with senior engineers on production features and application workflows.</li>
-              <li>Develop and test features using React, Node.js, Express.js, and MongoDB across user-facing and backend modules.</li>
-              <li>Debug application issues, analyze logs, monitor APIs, validate features, and assist with release activities to improve reliability.</li>
-              <li>Work with service integrations and cloud deployment workflows while gaining end-to-end product development exposure.</li>
+              <li>Contributed to full-stack development of an AI-powered food-tech platform, working with senior engineers on production features and application workflows.</li>
+              <li>Developed and tested features using React, Node.js, Express.js, and MongoDB across user-facing and backend modules.</li>
+              <li>Debugged application issues, analyzed logs, monitored APIs, validated features, and assisted with release activities to improve reliability.</li>
+              <li>Worked with service integrations and cloud deployment workflows while gaining end-to-end product development exposure.</li>
             </ul>
           </article>
 
@@ -984,6 +275,19 @@
               <li>Implemented backend functionality and database operations using object-oriented programming principles.</li>
               <li>Used Git for version control and collaborated in Agile development cycles.</li>
               <li>Tested APIs using Postman and debugged issues to improve correctness and reliability.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card reveal">
+            <p class="experience-meta">Oct 2024 – Nov 2024 · 1 month · Online</p>
+            <h3>
+              Cybersecurity Intern ·
+              <a href="https://www.linkedin.com/company/elewayte-an-online-training-company/" target="_blank" rel="noopener noreferrer" class="external-link">Elewayte</a>
+            </h3>
+            <ul class="experience-list">
+              <li>Completed a one-month online cybersecurity internship through hands-on projects.</li>
+              <li>Gained practical exposure to cybersecurity concepts through project-based learning.</li>
+              <li>Internship certified by Wipro diceID. <a href="https://lnkd.in/p/gWDU5M2q" target="_blank" rel="noopener noreferrer" class="external-link">View Certificate</a></li>
             </ul>
           </article>
         </div>
@@ -1178,6 +482,26 @@
               <span>Python</span>
             </div>
           </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <span class="cert-year">2024</span>
+            </div>
+            <h3>
+              <a href="https://lnkd.in/p/gWDU5M2q" target="_blank" rel="noopener noreferrer" class="external-link">
+                Cybersecurity Internship Certificate
+              </a>
+            </h3>
+            <p>
+              <a href="https://www.linkedin.com/company/elewayte-an-online-training-company/" target="_blank" rel="noopener noreferrer" class="external-link">Elewayte</a>
+              · Certified by <a href="https://www.linkedin.com/company/wipro/" target="_blank" rel="noopener noreferrer" class="external-link">Wipro</a> diceID
+            </p>
+            <p>Completed a one-month online internship with hands-on cybersecurity projects, Oct 2024 – Nov 2024.</p>
+            <div class="cert-tags">
+              <span>Cybersecurity</span>
+              <span>Hands-on Projects</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1220,11 +544,11 @@
 
     <section id="contact" class="section">
       <div class="container contact-wrapper">
-        <div class="section-heading reveal" style="text-align: center; margin-inline: auto;">
+        <div class="section-heading contact-heading reveal">
           <p class="section-kicker">Contact</p>
-          <h2>Let’s connect for software, backend, and full-stack opportunities.</h2>
+          <h2>Let’s connect.</h2>
           <p>
-            Open to software developer, backend developer, Java developer, and full-stack roles.
+            Connect with me to discuss backend engineering, full-stack development, and professional collaboration across technologies and industries.
           </p>
         </div>
 
@@ -1254,7 +578,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Bhagyashree Kerur. Designed and developed with passion.</p>
+    <p>© 2026 Bhagyashree Kerur. Software Developer.</p>
   </footer>
 
   <script>
@@ -1264,22 +588,28 @@
 
     function setTheme(theme) {
       root.setAttribute("data-theme", theme);
+      themeToggle.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
+      try { localStorage.setItem("portfolio-theme", theme); } catch {}
       themeIcon.textContent = theme === "dark" ? "☀" : "☾";
     }
 
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(prefersDark ? "dark" : "light");
+    let savedTheme;
+    try { savedTheme = localStorage.getItem("portfolio-theme"); } catch {}
+    setTheme(savedTheme === "light" ? "light" : "dark");
 
     themeToggle.addEventListener("click", () => {
       const currentTheme = root.getAttribute("data-theme");
       setTheme(currentTheme === "dark" ? "light" : "dark");
     });
 
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("motion-ready");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -1287,6 +617,7 @@
     );
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    }
   </script>
 </body>
 </html>
